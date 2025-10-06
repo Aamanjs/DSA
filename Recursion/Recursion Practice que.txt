@@ -1,0 +1,39 @@
+1. Climbing Stairs (with memoization)
+
+You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. How many distinct ways can you climb to the top?
+
+2. Coin Change (Count ways)
+
+Given an amount and an array of coin denominations, find the number of ways to make the amount using the coins. You can use an unlimited number of each coin.
+
+3. Longest Common Subsequence (LCS)
+
+Given two strings, find the length of their longest common subsequence. Use recursion with memoization to optimize.
+
+4. 0/1 Knapsack Problem
+
+Given weights and values of items, and a maximum weight capacity, find the maximum value you can carry. Use recursion with memoization.
+
+5. Unique Paths
+
+You are at the top-left corner of an m x n grid. You can only move down or right. Find how many unique paths to reach the bottom-right corner.
+
+6. Minimum Path Sum
+
+Given a grid of non-negative numbers, find a path from top-left to bottom-right which minimizes the sum of all numbers along its path. You can only move down or right.
+
+7. Decode Ways
+
+A message containing letters A-Z is encoded to numbers using 'A' -> 1, 'B' -> 2, ..., 'Z' -> 26. Given a digit string, count how many ways it can be decoded.
+
+8. Edit Distance
+
+Given two strings, find the minimum number of operations required to convert one string into the other. Operations can be insert, remove, or replace a character.
+
+9. Partition Problem
+
+Given a set of integers, determine if it can be partitioned into two subsets such that the sum of elements in both subsets is the same.
+
+10. Palindrome Partitioning
+
+Given a string, partition it such that every substring of the partition is a palindrome. Return the minimum cuts needed for a palindrome partitioning of the string.
