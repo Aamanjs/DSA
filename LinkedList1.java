@@ -1,9 +1,10 @@
+package linkedList;
 
 public class LinkedList1 {
 	
-	SinglyLinkedListNode head = new SinglyLinkedListNode(99);
+	static SinglyLinkedListNode head; 
 	
-	class SinglyLinkedListNode {
+	public static class SinglyLinkedListNode {
 		int data;
 		SinglyLinkedListNode next;
 		public SinglyLinkedListNode(int data) {
@@ -11,6 +12,22 @@ public class LinkedList1 {
 			this.next = null;
 		}
 	}
+	
+	public static void main(String[] args) {
+		LinkedList1 l22 = new LinkedList1();
+		head = new SinglyLinkedListNode(99);
+
+		l22.inserAtBeginning(101);
+		l22.inserAtBeginning(102);
+		l22.inserAtBeginning(104);
+		
+		l22.insertAtEnd(98);
+		
+		l22.insertBeforeGivenNode(100, 99);
+		
+		l22.insertAfterGivenNode(103, 104); 
+	}
+	
 	
 	// -----------------------------------------------------------------------------------
 	
@@ -73,7 +90,7 @@ public class LinkedList1 {
 		}
 		newnode.next = temp;
 		prev.next = newnode;		
-		
+	
 		//to print link list after adding element in between
 				SinglyLinkedListNode itr = head;
 				while(itr != null) {
@@ -108,22 +125,6 @@ public class LinkedList1 {
 		}
 		System.out.println();
 		return;
-	}
-	
-	
-	
-	
-	public static void main(String[] args) {
-		LinkedList1 l22 = new LinkedList1();
-		l22.inserAtBeginning(101);
-		l22.inserAtBeginning(102);
-		l22.inserAtBeginning(104);
-		
-		l22.insertAtEnd(98);
-		
-		l22.insertBeforeGivenNode(100, 99);
-		
-		l22.insertAfterGivenNode(103, 104); 
 	}
 
 }
