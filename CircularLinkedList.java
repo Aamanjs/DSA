@@ -34,6 +34,21 @@ public class SinglyCircularLL {
 		CL1.insertAfterGivenNode(102, 101);
 		CL1.insertAfterGivenNode(95, 94);
 		
+		CL1.deleteAtStart();
+		
+		CL1.deleteAtEnd();
+		
+		CL1.deleteBeforeGivenNode(101);
+
+		CL1.deleteBeforeGivenNode(100);
+		
+		CL1.deleteBeforeGivenNode(100);
+		
+//		CL1.deleteAfterGivenNode(97);
+//		
+		CL1.deleteAfterGivenNode(99);
+		
+		CL1.deleteAfterGivenNode(99);
 		
 		
 	}
@@ -146,6 +161,113 @@ public class SinglyCircularLL {
 		
 		
 	}
+	
+	//----------------------------------------------------
+	
+	public static void deleteAtStart() {
+		
+		if(head == null) {
+			System.out.println("List is empty");
+			return;
+		}
+//		createNode temp = head.next;
+//		tail.next = null;
+//		head = temp;
+//		tail.next = head;
+		
+		head = head.next;
+		tail.next = head.next;
+		tail.next = head;
+		
+		printData();
+	}
+	
+	//----------------------------------------------------
+	
+	public static void deleteAtEnd() {
+		
+		if(head == null) {
+			System.out.println("List is empty");
+			return;
+		}
+		
+		createNode temp = head;
+		while(temp.next != tail) {
+			temp = temp.next;
+		}
+		
+//		createNode temp2 = head;
+//		temp.next = null;
+//		tail = temp;
+//		tail.next = temp2;
+		
+		temp.next = head;
+		tail = temp;
+		
+		printData();
+		
+	}
+	
+	//----------------------------------------------------
+	
+	public static void deleteBeforeGivenNode(int value) {
+		
+		if(head == null) {
+			System.out.println("List is empty");
+			return;
+		}
+		
+		if(head.data == value) {
+			deleteAtEnd();
+			return;
+		}
+		
+		if(head.next.data == value) {
+			head = head.next;
+			tail.next = head;
+			printData();
+			return;
+		}
+		
+		
+		createNode temp = head;
+		createNode prev = null;
+		while( temp.next.data != value && temp.next != head) {
+			prev = temp;
+			temp = temp.next;
+		}
+		prev.next = prev.next.next;
+		
+		System.out.println(temp.data+ " " +prev.data);
+		
+		printData();
+		
+	}
+	
+	//----------------------------------------------------
+	
+	public static void deleteAfterGivenNode(int value) {
+		
+		if(head == null) {
+			System.out.println("List is empty");
+			return;
+		}
+		
+		if(tail.data == value) {
+			deleteAtStart();
+			return;
+		}
+		
+		createNode temp = head;
+		while(temp.data != value && temp.next != head) {
+			temp = temp.next;
+		}
+		temp.next = temp.next.next;
+		
+		printData();
+		
+	}
+	
 	
 	//----------------------------------------------------
 	
